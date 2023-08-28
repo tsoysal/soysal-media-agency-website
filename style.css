@@ -25,6 +25,7 @@ body {
 .black-bg-btn {
     background-color: inherit;
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .white-bg-btn {
@@ -37,14 +38,19 @@ button {
     padding: 10px 20px;
     border-radius: 20px;
     border: 1px solid var(--white-color);
+    cursor: pointer;
 }
 
 
 
 /* Nav Section */
 
+.container {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
 nav {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -68,13 +74,15 @@ header {
 }
 
 .content h1{
-    font-size: 38px;
+    font-size: 3rem;
     line-height: 2.2rem;
+    margin-bottom: 2rem;
 }
 
 .content .first-line {
     display: block;
-    font-size: 26px;
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
 }
 
 .content .second-line {
@@ -83,14 +91,22 @@ header {
 
 .content p {
     color: var(--gray-color);
-    margin: 30px 0;
+    margin-bottom: 2rem;
     line-height: 25px;
+    font-size: 1.2rem;
 }
 
 
 .buttons {
     display: flex;
     gap: 10px;
+}
+
+.buttons button {
+    width: 300px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .main-image {
@@ -118,13 +134,11 @@ header {
     border: 1px solid var(--white-color);
     border-radius: 30px;
     padding: 40px 35px;
-    width: 300px;
+    max-width: 350px;
 }
 
 .feature img {
-    width: 100px;
-    height: 80px;
-    border: 1px solid var(--white-color);
+    height: 100px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -153,4 +167,102 @@ header {
 footer p {
     text-align: center;
     padding: 20px 0;
+}
+
+
+@media screen and (min-width: 992px){
+    :root {
+        font-size: 19px;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    header {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 50px;
+        height: 70vh;
+    }
+
+    header .content {
+        max-width: 50%;
+        margin-top: 0;
+    }
+
+    header .content h1 {
+        font-size: 2.5rem;
+    }
+
+    header .buttons button {
+        width: 160px;
+        font-size: 1rem;
+    }
+
+    header figure img{
+        width: 500px;
+    }
+
+    .features {
+        padding-inline:1.5rem;
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .feature {
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1200px){
+    
+    .container {
+        max-width: 1140px;
+    }
+
+    header .content h1{
+        font-size: 3rem;
+    }
+
+    header .content .first-line {
+        font-size: 2rem;
+    }
+
+    header .content p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    header figure img {
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1400px){
+    
+    .container {
+        max-width: 1320px;
+    }
+
+    header .content h1{
+        font-size: 3rem;
+        margin-bottom: 2.2rem;
+    }
+
+    header .content .first-line {
+        font-size: 2rem;
+    }
+
+    header .content p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 2.2rem;
+    }
+
+    header figure img {
+        width: 600px;
+    }
 }
